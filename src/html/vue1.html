@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实现v-model的绑定</title>
+</head>
+<body>
+    <input type="text" id="input" v-model="a"/>
+    <!-- <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script> -->
+    <script src="../js/vue1.js"></script>
+    <script>
+        window.vm = new Vue({
+            data: {
+                b: 10000,
+                a: 1
+            },
+            el: '#input'
+        });
+        setInterval(() => {
+            vm.a++;
+        }, 1000);
+    </script>
+</body>
+</html>
