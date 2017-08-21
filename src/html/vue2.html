@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实现多个v-model的绑定</title>
+</head>
+<body>
+    <div id="form">
+        <input type="text" v-model="a" />
+        <br />
+        <input type="text" v-model="b" />
+        <div>
+            <input type="text" v-model="c" />
+        </div>
+    </div>
+    <script src="../js/vue2.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script> -->
+    <script>
+        window.vm = new Vue({
+            data: {
+                a: 0,
+                b: 100,
+                c: 2,
+            },
+            el: '#form'
+        });
+    </script>
+</body>
+</html>
