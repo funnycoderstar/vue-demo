@@ -8,8 +8,11 @@
 </head>
 <body>
     <div id="form">
+        <h4>这是测试v-model的效果</h4>
         <input type="text" v-model="a" />
         <input type="text" v-model="a" />
+        <hr>
+        <h4>这是测试{{}}的效果</h4>
         <div>{{ a }}</div>
         <p>{{ a }}</p>
         {{ a }}{{ b }} <br />
@@ -19,7 +22,10 @@
             <input type="text" v-model="c" />
             <p>{{ c }}</p>
         </div>
+        <hr>
+        <h4>这是测试v-bind和v-on的效果</h4>
         <img v-bind:src="src" v-bind:width="width1" :height="height" v-on:click="log" />
+        <p>打开控制台,点击img,查看v-on的绑定效果</p>
     </div>
     <script src="../js/vue.js"></script>
     <!-- <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script> -->
@@ -27,7 +33,7 @@
         window.obj = {
             a: 0,
             b: 100,
-            c: 'heheh',
+            c: '这是测试',
             src: "http://cdn.suisuijiang.com/message_1492395396308.png?imageView2/2/w/40/h/40",
             width1: 100,
             height: 100,
@@ -37,8 +43,8 @@
             data: obj,
             methods: {
                 log: function() {
-                    console.log('click');
-                    console.log(this.c);
+                    console.log('你点击了图片');
+                    console.log(`当前c的值为 ${this.c}`);
                 }
             }
         });
