@@ -20,7 +20,7 @@ function Vue(data) {
             },
         })
         // 实现view到model的绑定
-        input.addEventListener("input", () => {
+        input.addEventListener("oninput", () => {
             this[model] = input.value;
         });
     } else {

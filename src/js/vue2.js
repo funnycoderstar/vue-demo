@@ -13,7 +13,7 @@ function Vue(data) {
                 item.value = data.data[model] = newVal;
             },
         })
-        item.addEventListener("input", () => {
+        item.addEventListener("oninput", () => {
             this[model] = item.value;
         });
     }
