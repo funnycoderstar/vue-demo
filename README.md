@@ -1,6 +1,7 @@
 # vue源码简析
 
-阅读vue的源码不仅可以深入的理解vue中的问题,还可以学习vue的程序设计
+阅读vue的源码不仅可以深入的理解vue中的问题,还可以学习vue的程序设计;
+简析的版本为 v2.5.16
 
 # 前言
 
@@ -10,3 +11,19 @@
 - template到DOM
 
 注: 每个模块里都包含了对vue源码对应部分的解析,还包含了一个简单的小例子;
+
+# 需要知道的一些javaScript基础
+
+Object.protoType
+
+Object.defineProperty()
+
+Object.getOwnPropertyDescriptor()
+
+Object.create()
+
+Object.keys()
+
+apply, call
+
+
