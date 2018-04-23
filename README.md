@@ -14,16 +14,32 @@
 
 # 需要知道的一些javaScript基础
 
-Object.protoType
+[flow.js](https://zhenyong.github.io/flowtype/docs/five-simple-examples.html#_)
 
-Object.defineProperty()
+## Object.protoType
 
-Object.getOwnPropertyDescriptor()
+## Object.defineProperty()
 
-Object.create()
 
-Object.keys()
+## Object.getOwnPropertyDescriptor()
 
-apply, call
+## Object.create()
+
+## Object.keys()
+
+## apply, call
+
+## import, export 的复合写法:
+在一个模块之中,先输入后输出同一个模块, import, export 语句可以写在一起;
+```js
+export { foo, bar } from 'my_module';
+// 可以简单理解为
+import { foo, bar } from 'my_module';
+export { foo, bar };
+
+// 整体输出
+export * from 'my_module';
+```
+上面代码中, import, export 语句可以结合在一起,写成一行,但是需要注意的是,写成一行后, foo和bar实际并没有导入当前模块,只是相对与外转发了这两个接口,导致当前模块不能使用foo和bar
 
 
