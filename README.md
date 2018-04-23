@@ -6,6 +6,7 @@
 # 前言
 
 目前主要有
+
 - vue响应式原理
 - virtual-dom
 - template到DOM
@@ -14,8 +15,19 @@
 
 # 需要知道的一些javaScript基础
 
-[flow.js](https://zhenyong.github.io/flowtype/docs/five-simple-examples.html#_)
+## [flow.js](https://zhenyong.github.io/flowtype/docs/five-simple-examples.html#_)
 
+vue源码中经常能看到 下面的这种代码
+
+![flow.jpeg](https://upload-images.jianshu.io/upload_images/3297464-d84e315425a7c522.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+乍一看还以为是TypeScript,查了一下,是flow.js;关于flow.js的介绍可以直接查看文档[flow.js](https://zhenyong.github.io/flowtype/docs/five-simple-examples.html#_)
+
+代码中使用 flow 进行接口类型标记和检查，在打包过程中移除这些标记。
+
+我们可以看看 vue 的作者 对于 选择 flow 而不是 typescript 的原因
+
+[vue 源码为什么选择 flow 来完成](https://www.zhihu.com/question/46397274)
 ## Object.protoType
 
 ## Object.defineProperty()
@@ -29,6 +41,11 @@
 
 ## apply, call
 
+## instanceof
+
+## slice
+
+## 闭包
 ## import, export 的复合写法:
 在一个模块之中,先输入后输出同一个模块, import, export 语句可以写在一起;
 ```js
