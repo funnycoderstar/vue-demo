@@ -127,3 +127,18 @@ function copyAugment (target: Object, src: Object, keys: Array<string>) {
 }
 ```
 
+## Dep
+
+Dep类是一个发布者,可以订阅多个观察者,依赖收集之后Deps会存在一个或多个Watcher对象,在数据变更的时候通知所有watcher
+
+不理解的地方: 观察者模式; 哈希表,怎么给每个DOM元素生成哈希值
+
+> 观察者模式, 类似在微信公众平台订阅了公众号,当他有新的文章发表后,就会推送给我们所有订阅的人
+
+
+## Watcher
+
+Watcher是一个观察者对象,依赖收集以后watcher对象会被保存在Deps, 数据变动的时候会由于Deps通知Watcher实例,然后由Watcher实例回调cb进行视图的更新
+
+
+执行getter的时候收集依赖, 执行setter的时候通知依赖,进行数据修改
