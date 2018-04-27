@@ -42,8 +42,18 @@ vue源码中经常能看到 下面的这种代码
 ## apply, call
 
 ## instanceof
+判断是哪种类型的对象
 
-## slice
+## slice, splice
+
+slice(start, end); 方法可从已有的数组中返回选定的元素。
+不会改变原始数组
+
+arrayObject.splice(index,howmany,item1,.....,itemX); 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+会改变原始数组;
+- index: 必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+- 必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+- item1, ..., itemX: 可选。向数组添加的新项目。
 
 ## 闭包
 ## import, export 的复合写法:
@@ -59,4 +69,10 @@ export * from 'my_module';
 ```
 上面代码中, import, export 语句可以结合在一起,写成一行,但是需要注意的是,写成一行后, foo和bar实际并没有导入当前模块,只是相对与外转发了这两个接口,导致当前模块不能使用foo和bar
 
+## Set和Map
+Set里面没有重复值
 
+## isArray() isObject() Object.isExtensible(object)
+isArray(): 是否为数组,返回布尔值
+isObject(): 是否为对象
+Object.isExtensible(object): 是否可向对象添加新属性
