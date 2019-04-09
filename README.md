@@ -31,11 +31,15 @@ vue源码中经常能看到 下面的这种代码
 ## Object.protoType
 
 ## Object.defineProperty()
-
+直接在一个对象上定义一个新属性，或者修改一个对象的现有属性
+Object.defineProperty(obj, prop, descriptor)
 
 ## Object.getOwnPropertyDescriptor()
+返回指定对象上一个自有属性对象的属性描述符（自有属性是直接赋予该对象上的属性，不需要从原型链上进行查找的属性）
 
 ## Object.create()
+创建一个新的对象，使用现有的对象来提供新创建对象的ProtoType
+例如 `var a = Object.create(null)`a就是一个没有原型的对象，调用a.toString()就会报错，因为toString()方法是定义在原型上的
 
 ## Object.keys()
 
@@ -73,6 +77,6 @@ export * from 'my_module';
 Set里面没有重复值
 
 ## isArray() isObject() Object.isExtensible(object)
-isArray(): 是否为数组,返回布尔值
-isObject(): 是否为对象
-Object.isExtensible(object): 是否可向对象添加新属性
+- isArray(): 是否为数组,返回布尔值
+- isObject(): 是否为对象
+- Object.isExtensible(object): 是否可向对象添加新属性
